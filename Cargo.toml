@@ -1,0 +1,24 @@
+[package]
+name = "multi_pass_udp"
+version = "0.1.0"
+authors = ["Toshiya Nakakura <nakakura@me.com>"]
+build = "build.rs"
+
+[dependencies]
+futures = "0.1.17"
+tokio-core = "0.1.10"
+tokio-io = "*"
+bincode = "*"
+rustc-serialize = "*"
+lazy_static = "*"
+
+[build-dependencies]
+gcc = "*"
+
+[[bin]]
+name = "sender"
+path = "src/sender.rs"
+
+[[bin]]
+name = "receiver"
+path = "src/receiver.rs"
